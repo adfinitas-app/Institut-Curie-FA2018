@@ -25016,11 +25016,13 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(".btn-play").on("click", function (e) {
     e.preventDefault();
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.content-video img').css("z-index", "1");
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.content-video .btn-play').css("z-index", "1");
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".videoyoutube")[0].src += "&autoplay=1";
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.content-video .btn-play').css("z-index", "1"); //$(".videoyoutube")[0].src += "&autoplay=1";
+
+    player2.playVideo();
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('#revealvideo').on('closed.zf.reveal', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.videoyoutube2')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*'); //section1
+    //$('#player iframe')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+    player.stopVideo(); //section1
 
     sr.reveal('.block_visible11', {
       distance: '0px',
@@ -25054,8 +25056,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       mobile: false
     });
   });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#revealvideo').on('open.zf.reveal', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".videoyoutube2")[0].src += "&autoplay=1";
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#revealvideo').on('open.zf.reveal', function () {//$(".videoyoutube2")[0].src += "&autoplay=1";
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('#revealvideo').foundation('open');
   window.sr = Object(scrollreveal__WEBPACK_IMPORTED_MODULE_2__["default"])(); //section2
