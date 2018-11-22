@@ -25180,7 +25180,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   var fbButton2 = document.getElementById('fb-share-button2');
   var twButton2 = document.getElementById('twitter-share-button2');
   var url = window.location.href;
-  url = "https://aider.curie.fr/don2018";
+  url = "https://triompherducancer.curie.fr";
   fbButton.addEventListener('click', function () {
     window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, 'facebook-share-dialog', 'width=800,height=600');
     return false;
